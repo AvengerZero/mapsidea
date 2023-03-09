@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Waypoints in Directions</title>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGYejSYYYlBcmzXzy3c5MusJkuww4jSP8&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="test.js"></script>
+  </head>
+  <body>
+		<nav>
+			<a class="active" href="index.html">Home</a>
+			<a href="createRoute.html">createRoute</a>
+		</nav>
+    <div id="map"></div>
+    <div id="right-panel">
+      <div>
+        <label for="Route">Route Number:</label>
+				<input type="text" id="routeid" name="routeId" required>
+				<input type="submit" id="search">
+        <b>Waypoints:</b> <br />
+        <select multiple id="waypoints">
+          <option value=""></option>
+        </select>
+        <br />
+      </div>
+      <div id="directions-panel"></div>
+    </div>
+  </body>
+</html>

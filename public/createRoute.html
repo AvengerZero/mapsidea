@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Create Your Adventure</title>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGYejSYYYlBcmzXzy3c5MusJkuww4jSP8&callback=initMap&libraries=places&v=weekly"
+      defer
+    ></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="createRoute.js"></script>
+  </head>
+  <body>
+    <nav>
+			<a href="index.html">Home</a>
+			<a class="active" href="createRoute.html">createRoute</a>
+		</nav>
+    <div id="map"></div>
+    <div id="right-panel">
+      <div>
+        <b>SELECTED WAYPOINTS:</b>
+        <select multiple id="waypoints"></select>
+        <br />
+        <br />
+				<form>
+		      <label for="tags">Tags:</label>
+		      <input type="text" id="tags" name="tags"><br><br>
+
+		      <label for="author">Author:</label>
+		      <input type="text" id="author" name="author"><br><br>
+
+		      <label for="title">Title:</label>
+		      <input type="text" id="title" name="title"><br><br>
+
+		      <label for="description">Description:</label><br>
+		      <textarea id="description" name="description" rows="6" cols="50"></textarea><br><br>
+		    </form>
+        <input type="submit" id="submit" />
+      </div>
+      <div id="directions-panel"></div>
+    </div>
+  </body>
+</html>

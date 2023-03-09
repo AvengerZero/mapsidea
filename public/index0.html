@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Example</title><script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGYejSYYYlBcmzXzy3c5MusJkuww4jSP8&callback=initMap&libraries=places&v=weekly" async></script>
+    <link rel="stylesheet" href="styles_2.css">
+    <script src="createRoute.js"></script>
+  </head>
+  <body>
+    <header class="topnav">
+      <a class="active" href="">Home</a>
+      <a href="bids.html">Bidding</a>
+      <a href="owners.html">Owners</a>
+      <a href="#about">About</a>
+      <img id="reveal-btn" class="exit hidden" src="images/test.png" alt="hide button">
+    </header>
+    <div id="main">
+      <div id="map"></div>
+      <nav id="result">
+        <img id="hide-btn1" class="exit" src="images/test.png" alt="hide button">
+        <input id ="searching" type="text" placeholder="Search..">
+        <div class="result topnav">
+        </div>
+        <select multiple id="waypoints">
+          <option value="7605 SE 27th St Suite 102, Mercer Island, WA 98040">The Home Collaborative</option>
+        </select>
+        <br />
+        <input type="submit" id="submit" />
+        <div id="directions-panel"></div>
+      </nav>
+    </div>
+    <footer>Thanks to Google Maps</footer>
+  </body>
+</html>
