@@ -66,6 +66,19 @@ app.get("/markers/:path", async function(req, res) {
   }
 });
 
+app.get("/pathinfo/:path", async function(req, res) {
+  let menu;
+  try {
+    menu = await queryHome("SELECT * FROM route_data WHERE id = " +
+                          req.params.path +
+                          ";");
+    res.json(menu);
+  } catch (err) {
+    res.type("text");
+    res.status(FILE_ERROR).send(SERVER_ERROR);
+  }
+});
+
 /*app.get("/newuid", async function(req, res) {
   let menu;
   try {

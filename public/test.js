@@ -20,7 +20,6 @@
         showRouteFromAPI(directionsService, directionsRenderer, document.getElementById("routeid").value);
         calculateAndDisplayRoute(directionsService, directionsRenderer);
       });
-    showRouteFromAPI(directionsService, directionsRenderer, "1");
 
   }
 
@@ -71,6 +70,18 @@
             }
           }
         );
+      })
+      .catch(console.error);
+
+    fetch("/pathinfo/" + numRoute)
+      .then(checkStatus)
+      .then(resp => resp.json())
+      .then(function(resp) {
+        resp = resp[0]
+        document.getElementById("tags").value = resp.tags
+        document.getElementById("author").value = resp.author
+        document.getElementById("title").value = resp.route_title
+        document.getElementById("description").value = resp.description
       })
       .catch(console.error);
   }
